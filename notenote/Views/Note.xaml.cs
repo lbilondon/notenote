@@ -36,5 +36,12 @@ namespace notenote
         {
 
         }
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            FrameworkElement root = Application.Current.RootVisual as FrameworkElement;
+            App.ViewModel.Remove(root.DataContext as NoteViewModel);
+            NavigationService.GoBack();
+        }
     }
 }

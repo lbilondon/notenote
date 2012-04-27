@@ -58,8 +58,8 @@
     </Grid>
     <!-- Sample code showing usage of ApplicationBar -->
    <phone:PhoneApplicationPage.ApplicationBar> 
-       <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True"> 
-           <shell:ApplicationBarIconButton x:Name="appbar_button1" Click="appbar_button1_Click" IconUri="/Images/appbar_button1.png" Text="Add"></shell:ApplicationBarIconButton> 
+       <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" Click="appbar_button1_Click" IconUri="/Images/appbar.add.rest.png" Text="Add"></shell:ApplicationBarIconButton> 
            <!--<shell:ApplicationBar.MenuItems> 
                <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="MenuItem 1"></shell:ApplicationBarMenuItem> 
            </shell:ApplicationBar.MenuItems> -->

@@ -71,6 +71,11 @@ namespace notenote
             return note;
         }
 
+        public void Remove(NoteViewModel Note)
+        {
+            this.Notes.Remove(Note);
+        }
+
         /// <summary>
         /// Creates and adds a few ItemViewModel objects into the Items collection.
         /// </summary>

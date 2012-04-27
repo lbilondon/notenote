@@ -52,7 +52,7 @@ namespace notenote
 
         private void appbar_button1_Click(object sender, EventArgs e)
         {
-            NoteViewModel _newItem = App.ViewModel.AddNew("test", "testing");
+            NoteViewModel _newItem = App.ViewModel.AddNew("new note", "");
             
             NavigationService.Navigate(new Uri("/Views/Note.xaml", UriKind.Relative));
             FrameworkElement root = Application.Current.RootVisual as FrameworkElement;

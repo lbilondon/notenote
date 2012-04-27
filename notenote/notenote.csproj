@@ -100,6 +100,8 @@
     <None Include="Properties\WMAppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\appbar.add.rest.png" />
+    <Content Include="Images\appbar.delete.rest.png" />
     <Content Include="ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

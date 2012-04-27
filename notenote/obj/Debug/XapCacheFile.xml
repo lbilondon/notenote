@@ -1,9 +1,11 @@
-﻿<xapCache source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\Bin\Debug\notenote.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="27/04/2012 15:40:21">
+﻿<xapCache source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\Bin\Debug\notenote.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="27/04/2012 16:52:10">
   <file source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="27/04/2012 09:43:21" />
   <file source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\Background.png" archivePath="Background.png" lastWriteTime="27/04/2012 09:43:17" />
   <file source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="27/04/2012 09:43:17" />
-  <file source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\obj\Debug\notenote.dll" archivePath="notenote.dll" lastWriteTime="27/04/2012 15:40:21" />
+  <file source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\obj\Debug\notenote.dll" archivePath="notenote.dll" lastWriteTime="27/04/2012 16:52:09" />
   <file source="c:\Program Files\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="14/02/2012 20:32:10" />
+  <file source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\Images\appbar.add.rest.png" archivePath="Images\appbar.add.rest.png" lastWriteTime="15/09/2011 16:33:14" />
+  <file source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\Images\appbar.delete.rest.png" archivePath="Images\appbar.delete.rest.png" lastWriteTime="15/09/2011 16:33:14" />
   <file source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="27/04/2012 09:43:17" />
   <file source="C:\Users\Testing\Documents\Visual Studio 2010\Projects\notenote\notenote\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="27/04/2012 09:43:21" />
 </xapCache>
