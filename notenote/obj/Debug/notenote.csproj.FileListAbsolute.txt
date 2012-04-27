@@ -1,0 +1,15 @@
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\Bin\Debug\ApplicationIcon.png
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\Bin\Debug\Background.png
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\Bin\Debug\notenote.dll
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\Bin\Debug\notenote.pdb
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\Bin\Debug\AppManifest.xaml
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\Bin\Debug\notenote.xap
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\Bin\Debug\Microsoft.Phone.Controls.dll
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\Bin\Debug\Microsoft.Phone.Controls.xml
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\ResolveAssemblyReference.cache
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\App.g.i.cs
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\MainPage.g.i.cs
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\notenote.g.resources
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\notenote.dll
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\notenote.pdb
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\XapCacheFile.xml
