@@ -55,6 +55,22 @@ namespace notenote
             private set;
         }
 
+        public NoteViewModel AddNew(string Title, string Body)
+        {
+            NoteViewModel note = new NoteViewModel();
+            DateTime date = DateTime.Now;
+
+            note.ID = date.ToString();
+            note.DateCreated = date;
+            note.DateUpdated = date;
+            note.Title = Title;
+            note.Body = Body;
+
+            this.Notes.Add(note);
+
+            return note;
+        }
+
         /// <summary>
         /// Creates and adds a few ItemViewModel objects into the Items collection.
         /// </summary>

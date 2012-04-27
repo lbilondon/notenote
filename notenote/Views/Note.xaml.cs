@@ -15,23 +15,26 @@ namespace notenote
 {
     public partial class Note : PhoneApplicationPage
     {
-        private string _noteID = null;
 
         public Note()
         {
             InitializeComponent();
-
-            if (_noteID != null)
-            {
-                DataContext = App.ViewModel;
-            }
         }
 
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            _noteID = NavigationContext.QueryString["ID"];
+        }
+
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -36,10 +36,27 @@ namespace notenote
 
         private void StackPanel_Tap(object sender, GestureEventArgs e)
         {
-            var realSender = (StackPanel)sender;
-            string id = (string)realSender.Tag;
+            
+        }
 
-            NavigationService.Navigate(new Uri(string.Format("/Views/Note.xaml?ID={0}", id), UriKind.Relative));
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            NoteViewModel _selectedItem = (sender as ListBox).SelectedItem as NoteViewModel;
+            
+            ((ListBox)sender).SelectedIndex = -1;
+
+            NavigationService.Navigate(new Uri("/Views/Note.xaml", UriKind.Relative));
+            FrameworkElement root = Application.Current.RootVisual as FrameworkElement;
+            root.DataContext = _selectedItem;
+        }
+
+        private void appbar_button1_Click(object sender, EventArgs e)
+        {
+            NoteViewModel _newItem = App.ViewModel.AddNew("test", "testing");
+            
+            NavigationService.Navigate(new Uri("/Views/Note.xaml", UriKind.Relative));
+            FrameworkElement root = Application.Current.RootVisual as FrameworkElement;
+            root.DataContext = _newItem;
         }
     }
 }

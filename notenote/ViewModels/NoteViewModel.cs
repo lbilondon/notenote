@@ -31,6 +31,7 @@ namespace notenote
                 if (value != _ID)
                 {
                     _ID = value;
+                    this._dateUpdated = DateTime.Now;
                     NotifyPropertyChanged("ID");
                 }
             }
@@ -94,6 +95,7 @@ namespace notenote
                 if (value != _title)
                 {
                     _title = value;
+                    this._dateUpdated = DateTime.Now;
                     NotifyPropertyChanged("Title");
                 }
             }
@@ -115,6 +117,7 @@ namespace notenote
                 if (value != _body)
                 {
                     _body = value;
+                    this._dateUpdated = DateTime.Now;
                     NotifyPropertyChanged("Body");
                 }
             }

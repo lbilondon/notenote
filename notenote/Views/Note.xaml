@@ -22,12 +22,19 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="{Binding Title}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="notenote" Style="{StaticResource PhoneTextNormalStyle}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="456*" />
+                <ColumnDefinition Width="0*" />
+            </Grid.ColumnDefinitions>
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="0,6,0,0" Name="textBox1" Text="{Binding Title, Mode=TwoWay}" VerticalAlignment="Top" Width="456" TextChanged="textBox1_TextChanged" />
+            <TextBox Height="480" HorizontalAlignment="Left" Margin="0,113,0,0" Name="textBox2" Text="{Binding Body, Mode=TwoWay}" VerticalAlignment="Top" Width="456" TextChanged="textBox2_TextChanged" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,77,0,0" Name="textBlock1" Text="{Binding DateCreated, StringFormat='Date created: \{0\}'}" VerticalAlignment="Top" Width="438" />
+           </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

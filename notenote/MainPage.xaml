@@ -7,7 +7,7 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728" 
     d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -23,10 +23,10 @@
             <!--Panorama item one-->
             <controls:PanoramaItem Header="recent">
                 <!--Double line list with text wrapping-->
-                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Notes}">
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Notes}" SelectionChanged="ListBox_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Margin="0,0,0,17" Width="432" Height="78" Tap="StackPanel_Tap" Tag="{Binding ID}">
+                            <StackPanel Margin="0,0,0,17" Width="432" Height="78">
                                 <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
                                 <TextBlock Text="{Binding DateUpdated, StringFormat='dd/MM/yyyy'}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
                             </StackPanel>
@@ -56,4 +56,13 @@
             </controls:PanoramaItem>
         </controls:Panorama>
     </Grid>
+    <!-- Sample code showing usage of ApplicationBar -->
+   <phone:PhoneApplicationPage.ApplicationBar> 
+       <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True"> 
+           <shell:ApplicationBarIconButton x:Name="appbar_button1" Click="appbar_button1_Click" IconUri="/Images/appbar_button1.png" Text="Add"></shell:ApplicationBarIconButton> 
+           <!--<shell:ApplicationBar.MenuItems> 
+               <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="MenuItem 1"></shell:ApplicationBarMenuItem> 
+           </shell:ApplicationBar.MenuItems> -->
+       </shell:ApplicationBar> 
+   </phone:PhoneApplicationPage.ApplicationBar> 
 </phone:PhoneApplicationPage>
