@@ -15,6 +15,27 @@ namespace notenote
 {
     public class NoteViewModel : INotifyPropertyChanged
     {
+        private string _ID;
+        /// <summary>
+        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
+        /// </summary>
+        /// <returns></returns>
+        public String ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (value != _ID)
+                {
+                    _ID = value;
+                    NotifyPropertyChanged("ID");
+                }
+            }
+        }
+
         private DateTime _dateCreated;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.

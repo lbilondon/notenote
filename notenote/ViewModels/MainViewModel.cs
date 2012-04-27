@@ -62,7 +62,7 @@ namespace notenote
         {
             // Sample data; replace with real data
             DateTime date = DateTime.Now;
-            this.Notes.Add(new NoteViewModel() { DateCreated = date, DateUpdated = date, Title = "example note", Body = "this is an example note" });
+            this.Notes.Add(new NoteViewModel() { ID = date.ToString(), DateCreated = date, DateUpdated = date, Title = "example note", Body = "this is an example note" });
             
             this.IsDataLoaded = true;
         }

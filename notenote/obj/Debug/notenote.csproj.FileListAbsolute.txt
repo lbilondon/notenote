@@ -13,3 +13,4 @@ c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Deb
 c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\notenote.dll
 c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\notenote.pdb
 c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\XapCacheFile.xml
+c:\users\testing\documents\visual studio 2010\Projects\notenote\notenote\obj\Debug\Views\Note.g.i.cs

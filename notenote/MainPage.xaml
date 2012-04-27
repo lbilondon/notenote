@@ -26,7 +26,7 @@
                 <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Notes}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Margin="0,0,0,17" Width="432" Height="78">
+                            <StackPanel Margin="0,0,0,17" Width="432" Height="78" Tap="StackPanel_Tap" Tag="{Binding ID}">
                                 <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
                                 <TextBlock Text="{Binding DateUpdated, StringFormat='dd/MM/yyyy'}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
                             </StackPanel>

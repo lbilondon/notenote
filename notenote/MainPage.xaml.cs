@@ -33,5 +33,13 @@ namespace notenote
                 App.ViewModel.LoadData();
             }
         }
+
+        private void StackPanel_Tap(object sender, GestureEventArgs e)
+        {
+            var realSender = (StackPanel)sender;
+            string id = (string)realSender.Tag;
+
+            NavigationService.Navigate(new Uri(string.Format("/Views/Note.xaml?ID={0}", id), UriKind.Relative));
+        }
     }
 }

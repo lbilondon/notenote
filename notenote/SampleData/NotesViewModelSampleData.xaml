@@ -5,7 +5,7 @@
     SampleProperty="Sample Text Property Value">
     
     <local:MainViewModel.Notes>
-        <local:NoteViewModel DateCreated="" DateUpdated="" Title="" Body=""/>
+        <local:NoteViewModel ID=""  DateCreated="" DateUpdated="" Title="" Body=""/>
     </local:MainViewModel.Notes>
     
 </local:MainViewModel>
