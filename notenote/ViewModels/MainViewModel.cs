@@ -12,7 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
-
+using System.IO;
+using System.IO.IsolatedStorage;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace notenote
 {
@@ -81,11 +84,41 @@ namespace notenote
         /// </summary>
         public void LoadData()
         {
-            // Sample data; replace with real data
-            DateTime date = DateTime.Now;
-            this.Notes.Add(new NoteViewModel() { ID = date.ToString(), DateCreated = date, DateUpdated = date, Title = "example note", Body = "this is an example note" });
-            
+            try
+            {
+
+                using (IsolatedStorageFile myIsolatedStorage = IsolatedStorageFile.GetUserStoreForApplication()) 
+                { 
+                    using(IsolatedStorageFileStream stream = myIsolatedStorage.OpenFile("Notes.xml", FileMode.Open))
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<notenote.NoteViewModel>));
+                        ObservableCollection<notenote.NoteViewModel> data = (ObservableCollection<notenote.NoteViewModel>)serializer.Deserialize(stream);
+                        this.Notes = data;
+                    }
+                }
+
+            }
+            catch { }
+
             this.IsDataLoaded = true;
+        }
+
+        public void SaveData()
+        {
+            using (IsolatedStorageFile myIsolatedStorage = IsolatedStorageFile.GetUserStoreForApplication())
+            {
+                using (IsolatedStorageFileStream isoStream = myIsolatedStorage.OpenFile("Notes.xml", FileMode.Create))
+                {
+                    XmlWriterSettings settings = new XmlWriterSettings();
+                    settings.Indent = true;
+
+                    XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<notenote.NoteViewModel>));
+                    using (XmlWriter writer = XmlWriter.Create(isoStream, settings)) 
+                    {
+                        serializer.Serialize(writer, this.Notes);
+                    }
+                }
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

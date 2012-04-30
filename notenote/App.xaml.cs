@@ -81,6 +81,8 @@ namespace notenote
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            // Ensure that application state is restored appropriately
+            App.ViewModel.LoadData();
         }
 
         // Code to execute when the application is activated (brought to foreground)
@@ -98,13 +100,20 @@ namespace notenote
         // This code will not execute when the application is closing
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
-            // Ensure that required application state is persisted here.
+            if (App.ViewModel.IsDataLoaded)
+            {
+                App.ViewModel.SaveData();
+            }
         }
 
         // Code to execute when the application is closing (eg, user hit Back)
         // This code will not execute when the application is deactivated
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
+            if (App.ViewModel.IsDataLoaded)
+            {
+                App.ViewModel.SaveData();
+            }
         }
 
         // Code to execute if a navigation fails

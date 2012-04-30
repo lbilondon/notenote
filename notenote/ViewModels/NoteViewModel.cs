@@ -10,16 +10,26 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Runtime.Serialization;
 
 namespace notenote
 {
+    [DataContract]
     public class NoteViewModel : INotifyPropertyChanged
     {
+        
         private string _ID;
+        private DateTime _dateCreated;
+        private DateTime _dateUpdated;
+        private string _title;
+        private string _body;
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
+        [DataMember]
         public String ID
         {
             get
@@ -37,11 +47,11 @@ namespace notenote
             }
         }
 
-        private DateTime _dateCreated;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
+        [DataMember]
         public DateTime DateCreated
         {
             get
@@ -58,11 +68,11 @@ namespace notenote
             }
         }
 
-        private DateTime _dateUpdated;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
+        [DataMember]
         public DateTime DateUpdated
         {
             get
@@ -79,11 +89,11 @@ namespace notenote
             }
         }
 
-        private string _title;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
+        [DataMember]
         public string Title
         {
             get
@@ -101,11 +111,11 @@ namespace notenote
             }
         }
 
-        private string _body;
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
         /// </summary>
         /// <returns></returns>
+        [DataMember]
         public string Body
         {
             get
@@ -123,7 +133,6 @@ namespace notenote
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String propertyName)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
